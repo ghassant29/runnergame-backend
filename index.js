@@ -39,7 +39,7 @@ io.on("connection", (socket) => {
     console.log("up");
   });
 
-  socket.on("game-over-backend", () => {
+  socket.on("gameover-backend", () => {
     socket.broadcast.emit("game-over");
   });
 

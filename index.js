@@ -39,6 +39,10 @@ io.on("connection", (socket) => {
     console.log("up");
   });
 
+  socket.on("game-over-backend", () => {
+    socket.broadcast.emit("game-over");
+  });
+
   // Handle disconnect
   socket.on("disconnect", () => {
     console.log("A user disconnected");

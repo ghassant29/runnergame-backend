@@ -39,7 +39,8 @@ io.on("connection", (socket) => {
     console.log("up");
   });
 
-  socket.on("gameover-backend", () => {
+  socket.on("gameover", () => {
+    console.log("gameover");
     socket.broadcast.emit("game-over");
   });
 
